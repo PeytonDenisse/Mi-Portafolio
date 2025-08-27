@@ -1,15 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const habilidadesButton = document.querySelector('[data-bs-target="#habilidades"]');
-    const iconoHabilidades = document.getElementById('icono-habilidades');
+// Marca activa en la quick-nav según scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const links = [...document.querySelectorAll(".quick-link")];
+  const sections = links
+    .map(a => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
 
-    habilidadesButton.addEventListener('click', () => {
-        // Cambia el ícono dependiendo del estado
-        if (habilidadesButton.getAttribute('aria-expanded') === 'true') {
-            iconoHabilidades.classList.remove('bi-dash');
-            iconoHabilidades.classList.add('bi-plus');
-        } else {
-            iconoHabilidades.classList.remove('bi-plus');
-            iconoHabilidades.classList.add('bi-dash');
-        }
+  const setActive = (id) => {
+    links.forEach(a => a.classList.toggle("active", a.getAttribute("href") === `#${id}`));
+  };
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target.id);
     });
+  }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
+
+  sections.forEach(sec => io.observe(sec));
 });
