@@ -1,4 +1,4 @@
-// Marca activa en la quick-nav según scroll
+// Marca activa en quick-nav al hacer scroll
 document.addEventListener("DOMContentLoaded", () => {
   const links = [...document.querySelectorAll(".quick-link")];
   const sections = links
@@ -16,4 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { rootMargin: "-40% 0px -55% 0px", threshold: 0.01 });
 
   sections.forEach(sec => io.observe(sec));
+});
+
+// Activa tooltips de Bootstrap (espera a que Bootstrap esté cargado)
+window.addEventListener("load", () => {
+  const triggers = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  [...triggers].forEach(el => new bootstrap.Tooltip(el));
 });
