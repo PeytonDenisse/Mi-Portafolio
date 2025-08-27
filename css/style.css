@@ -100,3 +100,25 @@ body{
 }
 .pill.pill-icon i{ font-size:1.6rem; line-height:1 }
 .pill.pill-icon .label{ font-size:.85rem; font-weight:600; line-height:1 }
+
+
+
+/* Pills con ícono arriba del texto */
+.pill.pill-icon{
+  display:flex;
+  flex-direction:column;      /* ícono arriba, texto abajo */
+  align-items:center;
+  gap:6px;
+  text-align:center;
+  min-width:96px;             /* ancho mínimo uniforme */
+  padding:.75rem .85rem;
+}
+.pill.pill-icon i{ 
+  font-size:1.6rem; 
+  line-height:1;
+}
+.pill.pill-icon .label{
+  font-size:.85rem;
+  font-weight:600;
+  line-height:1;
+}
