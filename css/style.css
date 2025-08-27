@@ -90,3 +90,13 @@ body{
 
 /* secciones con offset para anclas */
 .section{ scroll-margin-top:100px }
+
+
+/* Pills con icono arriba del texto */
+.pill.pill-icon{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; gap:6px;
+  min-width: 92px; padding:.75rem .85rem;
+}
+.pill.pill-icon i{ font-size:1.6rem; line-height:1 }
+.pill.pill-icon .label{ font-size:.85rem; font-weight:600; line-height:1 }
