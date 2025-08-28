@@ -108,3 +108,25 @@ body{
 
 /* Offset de anclas */
 .section{ scroll-margin-top:100px }
+
+
+/* Pills transparentes (ya lo tienes) */
+.pill{ background:transparent!important; box-shadow:none; border:none; }
+.pill:hover{ background:rgba(110,86,207,.08); }
+
+/* Ícono arriba y nombre abajo */
+.pill.pill-icon{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:6px; text-align:center;
+  min-width:96px; min-height:88px;
+  padding:.75rem .85rem;
+}
+.pill.pill-icon i{ font-size:1.6rem; line-height:1 }
+.pill.pill-icon .label{ font-size:.95rem; font-weight:600; line-height:1 }
+
+/* (Opcional) grilla para que se vean súper ordenadas */
+.skills-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap:14px 16px;
+}
