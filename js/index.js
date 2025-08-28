@@ -23,3 +23,5 @@ window.addEventListener("load", () => {
   const triggers = document.querySelectorAll('[data-bs-toggle="tooltip"]');
   [...triggers].forEach(el => new bootstrap.Tooltip(el));
 });
+
+

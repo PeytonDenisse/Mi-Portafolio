@@ -50,26 +50,28 @@ body{
 .mini-card i{ color:var(--primary) }
 
 /* Pills base */
+/* ===== Pills transparentes (override) ===== */
 .pill{
-  display:inline-block;
-  padding:.4rem .75rem;
-  border-radius:999px;
-  background:var(--primary-weak);
-  color:#3b2ea3;
-  font-size:.9rem;
-  font-weight:500;
+  background: transparent !important;  /* sin fondo */
+  box-shadow: none;
+  border: none;
+  /* si prefieres el texto oscuro en lugar de morado, descomenta: */
+  /* color: var(--text); */
 }
 
-/* Pills con ícono arriba del texto */
+/* seguimos usando el layout con ícono arriba */
 .pill.pill-icon{
-  display:flex;
-  flex-direction:column;  /* ícono arriba, texto abajo */
-  align-items:center;
-  gap:6px;
-  text-align:center;
-  min-width:96px;
-  padding:.75rem .85rem;
+  background: transparent !important;
+  border: none;
+  min-width: 96px;        /* mantiene tamaño uniforme */
+  padding: .75rem .85rem; /* mismo padding */
 }
+
+/* feedback sutil al pasar el mouse (opcional) */
+.pill:hover{
+  background: rgba(110,86,207,.08);   /* leve resaltado */
+}
+
 .pill.pill-icon i{ font-size:1.6rem; line-height:1 }
 .pill.pill-icon .label{ font-size:.85rem; font-weight:600; line-height:1 }
 
