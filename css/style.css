@@ -35,11 +35,15 @@ body{
 }
 
 /* Avatar */
-.avatar{
-  width:120px; height:120px; object-fit:cover;
-  border-radius:20px;
-  border:6px solid #fff;
-  box-shadow:0 8px 16px rgba(17,24,39,.12);
+.avatar {
+  width: 210px;          /* más grande (puedes subir a 200 o 220 si lo prefieres) */
+  height: 210px;
+  object-fit: cover;     /* recorta sin deformar */
+  border-radius: 50%;    /* círculo perfecto */
+  border: 4px solid #fff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  margin: 0 auto;        /* centra horizontalmente */
+  display: block;
 }
 
 /* Mini cards */
@@ -49,31 +53,51 @@ body{
 }
 .mini-card i{ color:var(--primary) }
 
-/* Pills base */
-/* ===== Pills transparentes (override) ===== */
+/* ===========================
+   Pills (transparentes)
+   =========================== */
 .pill{
-  background: transparent !important;  /* sin fondo */
-  box-shadow: none;
-  border: none;
-  /* si prefieres el texto oscuro en lugar de morado, descomenta: */
-  /* color: var(--text); */
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:.4rem .75rem;
+  border-radius:999px;
+  background:transparent!important;   /* sin fondo */
+  color:var(--text);
+  border:none;
+  box-shadow:none;
+  transition:background .15s ease;
 }
-
-/* seguimos usando el layout con ícono arriba */
-.pill.pill-icon{
-  background: transparent !important;
-  border: none;
-  min-width: 96px;        /* mantiene tamaño uniforme */
-  padding: .75rem .85rem; /* mismo padding */
-}
-
-/* feedback sutil al pasar el mouse (opcional) */
 .pill:hover{
-  background: rgba(110,86,207,.08);   /* leve resaltado */
+  background:rgba(110,86,207,.08);    /* leve resaltado al hover */
 }
 
-.pill.pill-icon i{ font-size:1.6rem; line-height:1 }
-.pill.pill-icon .label{ font-size:.85rem; font-weight:600; line-height:1 }
+/* Ícono arriba y nombre abajo */
+.pill.pill-icon{
+  flex-direction:column;               /* ícono arriba, texto abajo */
+  justify-content:center;
+  text-align:center;
+  min-width:96px;
+  min-height:88px;
+  padding:.75rem .85rem;
+  gap:6px;
+}
+.pill.pill-icon i{
+  font-size:1.6rem;
+  line-height:1;
+}
+.pill.pill-icon .label{
+  font-size:.95rem;
+  font-weight:600;
+  line-height:1;
+}
+
+/* Grilla para skills (ordenado y responsivo) */
+.skills-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap:14px 16px;
+}
 
 /* Project cards */
 .project-card{
@@ -81,7 +105,10 @@ body{
   text-decoration:none; color:inherit; box-shadow:var(--shadow);
   transition:transform .2s ease, box-shadow .2s ease;
 }
-.project-card:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(17,24,39,.12) }
+.project-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(17,24,39,.12);
+}
 .project-card.disabled{ opacity:.7; pointer-events:none }
 
 /* Títulos */
@@ -109,24 +136,80 @@ body{
 /* Offset de anclas */
 .section{ scroll-margin-top:100px }
 
-
-/* Pills transparentes (ya lo tienes) */
-.pill{ background:transparent!important; box-shadow:none; border:none; }
-.pill:hover{ background:rgba(110,86,207,.08); }
-
-/* Ícono arriba y nombre abajo */
-.pill.pill-icon{
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:6px; text-align:center;
-  min-width:96px; min-height:88px;
-  padding:.75rem .85rem;
+/* ===========================
+   Responsivo
+   =========================== */
+@media (max-width: 576px){
+  .skills-grid{
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap:12px 12px;
+  }
+  .pill.pill-icon{
+    min-width:100px;
+    min-height:84px;
+  }
 }
-.pill.pill-icon i{ font-size:1.6rem; line-height:1 }
-.pill.pill-icon .label{ font-size:.95rem; font-weight:600; line-height:1 }
 
-/* (Opcional) grilla para que se vean súper ordenadas */
-.skills-grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap:14px 16px;
+
+/* Pills LILAS solo dentro de Competencias */
+.pills-solid .pill{
+  background: var(--primary-weak) !important; /* lila suave */
+  color: #3b2ea3 !important;
+  border: 1px solid rgba(110,86,207,.18);
+  border-radius: 999px;
+  padding: .4rem .75rem;
 }
+.pills-solid .pill:hover{
+  background: rgba(110,86,207,.25) !important;
+}
+
+
+/* Utilidad para justificar texto */
+.text-justify{
+  text-align: justify;
+  text-justify: inter-word; /* opcional, mejora espaciado en algunos navegadores */
+  hyphens: auto;            /* cortes de palabra automáticos (usa lang="es") */
+}
+
+
+
+/* Miniatura en las cards de proyectos */
+.project-thumb{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-top-left-radius:18px;
+  border-top-right-radius:18px;
+  display:block;
+}
+
+/* Chips de filtro */
+.filter-chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:.35rem .75rem;
+  border-radius:999px;
+  background:var(--primary-weak);
+  color:#3b2ea3;
+  border:1px solid rgba(110,86,207,.18);
+  font-weight:600;
+  cursor:pointer;
+}
+.filter-chip:hover{ background:rgba(110,86,207,.25) }
+.filter-chip.active{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+/* Badges de tecnologías dentro de cada card */
+.badge-tech{
+  display:inline-block;
+  padding:.2rem .5rem;
+  border-radius:999px;
+  font-size:.75rem;
+  background:#f3f4f6;
+  border:1px solid rgba(17,24,39,.08);
+}
+

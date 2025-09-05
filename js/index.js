@@ -24,4 +24,23 @@ window.addEventListener("load", () => {
   [...triggers].forEach(el => new bootstrap.Tooltip(el));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const chips = document.querySelectorAll('.filter-chip');
+  const items = document.querySelectorAll('.project-item');
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const filter = chip.dataset.filter;
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      items.forEach(it => {
+        const techs = it.dataset.tech.toLowerCase();
+        const show = (filter === 'all') || techs.includes(filter);
+        it.style.display = show ? '' : 'none';
+      });
+    });
+  });
+});
+
 
