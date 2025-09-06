@@ -1,12 +1,13 @@
 // js/router.js
 const routes = {
-  '/':        '/pages/about.html',
-  '/about':   '/pages/about.html',
-  '/education':'/pages/education.html',
-  '/skills':  '/pages/skills.html',
-  '/projects':'/pages/projects.html',
-  '/contact': '/pages/contact.html'
+  '/':          'pages/about.html',
+  '/about':     'pages/about.html',
+  '/education': 'pages/about.html',
+  '/contact':   'pages/about.html',
+  '/projects':  'pages/projects.html'
 };
+// ...
+const res404 = await fetch('pages/404.html');
 
 const contentEl = document.getElementById('content');
 
