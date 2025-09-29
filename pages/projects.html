@@ -1,199 +1,97 @@
 <section class="section soft-card p-4 mb-4">
   <h2 class="section-title"><i class="bi bi-grid me-2"></i>Proyectos</h2>
 
-  <div class="scroll-wrapper">
-    <button class="scroll-btn prev" type="button" aria-label="Anterior" onclick="document.getElementById('projectsScroll').scrollBy({left:-320,behavior:'smooth'})">
-      <i class="bi bi-chevron-left"></i>
-    </button>
-
-    <div class="scroll-row" id="projectsScroll">
-      <!-- Card 1: Django -->
-      <article class="project-card h-100">
-        <img class="project-thumb" src="./img/djangoYpython.jpg" alt="Catálogo Moda en Django">
-        <div class="p-3">
-          <h3 class="h6 mb-2">Catálogo Moda (Django)</h3>
-          <div class="d-flex flex-wrap gap-1 mb-3">
-            <span class="badge bg-secondary">Python</span><span class="badge bg-secondary">Django</span>
-            <span class="badge bg-secondary">Bootstrap</span><span class="badge bg-secondary">MySQL</span>
-          </div>
-          <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#proj-django">Ver más</button>
-            <a class="btn btn-sm btn-outline-secondary"
-               href="https://github.com/PeytonDenisse/Catalogo_Moda_APP"
-               target="_blank" rel="noopener">Código</a>
-          </div>
+  <div class="d-grid gap-4">
+    <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
+      <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
+        <img class="project-thumb-list rounded" src="./img/djangoYpython.jpg" alt="Catálogo Moda en Django">
+      </div>
+      <div class="flex-grow-1">
+        <h3 class="h5 mb-1">Catálogo Moda (Django)</h3>
+        <p class="text-muted mb-2">Aplicación web para la gestión de productos, categorías y pedidos de un catálogo de moda. Incluye autenticación de usuarios y un panel de administración.</p>
+        <div class="d-flex flex-wrap gap-1 mb-2">
+          <span class="badge bg-secondary">Python</span>
+          <span class="badge bg-secondary">Django</span>
+          <span class="badge bg-secondary">Bootstrap</span>
+          <span class="badge bg-secondary">MySQL</span>
         </div>
-      </article>
+        <div class="d-flex gap-2">
+          <a class="btn btn-sm btn-outline-secondary" href="https://github.com/PeytonDenisse/Catalogo_Moda_APP" target="_blank" rel="noopener">
+            <i class="bi bi-github me-1"></i> Código
+          </a>
+          </div>
+      </div>
+    </article>
 
-      <!-- Card 2: OpenCV -->
-      <article class="project-card h-100">
-        <img class="project-thumb" src="./img/pythonCV.png" alt="Detector de pastillas con OpenCV">
-        <div class="p-3">
-          <h3 class="h6 mb-2">Detector de pastillas</h3>
-          <div class="d-flex flex-wrap gap-1 mb-3">
-            <span class="badge bg-secondary">Python</span><span class="badge bg-secondary">OpenCV</span>
-          </div>
-          <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#proj-kotlin">Ver más</button>
-            <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noopener">Código</a>
-          </div>
+    <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
+      <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
+        <img class="project-thumb-list rounded" src="./img/pythonCV.png" alt="Detector de pastillas con OpenCV">
+      </div>
+      <div class="flex-grow-1">
+        <h3 class="h5 mb-1">Detector de Pastillas</h3>
+        <p class="text-muted mb-2">Sistema de visión por computadora para identificar las pastillas y la cantidad faltantante de un empaque con la librería OpenCV.</p>
+        <div class="d-flex flex-wrap gap-1 mb-2">
+          <span class="badge bg-secondary">Python</span>
+          <span class="badge bg-secondary">OpenCV</span>
         </div>
-      </article>
+        <div class="d-flex gap-2">
+          <a class="btn btn-sm btn-outline-secondary" href="https://github.com/PeytonDenisse/Deterctor_Pastillas" target="_blank" rel="noopener">
+            <i class="bi bi-github me-1"></i> Código
+          </a>
+        </div>
+      </div>
+    </article>
 
-      <!-- Card 3: Landing -->
-      <article class="project-card h-100">
-        <img class="project-thumb" src="./img/proyectos/landing-frontend.jpg" alt="Landing de Servicios">
-        <div class="p-3">
-          <h3 class="h6 mb-2">Landing de Servicios</h3>
-          <div class="d-flex flex-wrap gap-1 mb-3">
-            <span class="badge bg-secondary">HTML</span><span class="badge bg-secondary">CSS</span><span class="badge bg-secondary">JS</span>
-          </div>
-          <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#proj-frontend">Ver más</button>
-            <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noopener">Código</a>
-          </div>
-        </div>
-      </article>
+   
 
-      <!-- Card 4 -->
-      <article class="project-card h-100">
-        <img class="project-thumb" src="./img/proyectos/otro-proyecto.jpg" alt="Otro proyecto">
-        <div class="p-3">
-          <h3 class="h6 mb-2">Otro Proyecto</h3>
-          <div class="d-flex flex-wrap gap-1 mb-3">
-            <span class="badge bg-secondary">Tech1</span><span class="badge bg-secondary">Tech2</span>
-          </div>
-          <div class="d-flex gap-2">
-            <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#proj-otro">Ver más</button>
-            <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noopener">Código</a>
-          </div>
-        </div>
-      </article>
+
+    <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
+  <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
+    <img class="project-thumb-list rounded" src="./img/kotlin.png" alt="Captura de pantalla de la app de Recetario">
+  </div>
+  <div class="flex-grow-1">
+    <h3 class="h5 mb-1">Recetario App (Kotlin)</h3>
+    <p class="text-muted mb-2">Aplicación móvil para Android desarrollada con **Jetpack Compose** para la gestión y visualización de recetas a través de una API REST.</p>
+    <div class="d-flex flex-wrap gap-1 mb-2">
+      <span class="badge bg-secondary">Kotlin</span>
+      <span class="badge bg-secondary">Android</span>
+      <span class="badge bg-secondary">Jetpack Compose</span>
+      <span class="badge bg-secondary">Retrofit</span>
     </div>
+    <div class="d-flex gap-2">
+      <a class="btn btn-sm btn-outline-secondary" href="https://github.com/PeytonDenisse/RecetarioApp" target="_blank" rel="noopener">
+        <i class="bi bi-github me-1"></i> Código
+      </a>
+      <a class="btn btn-sm btn-outline-primary" href="URL_DEL_VIDEO_DEMO" target="_blank" rel="noopener">
+        <i class="bi bi-play-circle me-1"></i> Video
+      </a>
+    </div>
+  </div>
+</article>
 
-    <button class="scroll-btn next" type="button" aria-label="Siguiente" onclick="document.getElementById('projectsScroll').scrollBy({left:320,behavior:'smooth'})">
-      <i class="bi bi-chevron-right"></i>
-    </button>
+
+ <!-- <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
+      <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
+        <img class="project-thumb-list rounded" src="./img/proyectos/landing-frontend.jpg" alt="Landing de Servicios">
+      </div>
+      <div class="flex-grow-1">
+        <h3 class="h5 mb-1">Landing de Servicios</h3>
+        <p class="text-muted mb-2">Desarrollo de una página de aterrizaje profesional, responsiva y accesible, siguiendo buenas prácticas de diseño frontend.</p>
+        <div class="d-flex flex-wrap gap-1 mb-2">
+          <span class="badge bg-secondary">HTML</span>
+          <span class="badge bg-secondary">CSS</span>
+          <span class="badge bg-secondary">JS</span>
+        </div>
+        <div class="d-flex gap-2">
+          <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noopener">
+            <i class="bi bi-github me-1"></i> Código
+          </a>
+        </div>
+      </div>
+    </article> -->
+
+
+
+
   </div>
 </section>
-
-<!-- MODAL: Django -->
-<div class="modal fade" id="proj-django" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Catálogo Moda (Django)</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p class="mb-2">
-          Aplicación web para administrar un catálogo de moda (CRUD de productos y categorías),
-          con autenticación y panel de administración de Django. BD: MySQL.
-        </p>
-        <ul class="mb-3">
-          <li>CRUD de productos y categorías.</li>
-          <li>Gestión de imágenes (Pillow) y campos de talla/color.</li>
-          <li>UI responsive con Bootstrap 5.</li>
-        </ul>
-
-        <div id="gal-django" class="carousel slide project-gallery" data-bs-ride="false">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#gal-django" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#gal-django" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#gal-django" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-
-          <div class="carousel-inner rounded-3 overflow-hidden">
-            <div class="carousel-item active">
-              <img src="./img/proyectos/django-inventario-list.jpg" class="d-block w-100" alt="Listado de productos" loading="lazy">
-              <div class="carousel-caption d-none d-md-block">
-                <small>Listado de productos</small>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/proyectos/django-inventario-form.jpg" class="d-block w-100" alt="Formulario de producto" loading="lazy">
-              <div class="carousel-caption d-none d-md-block">
-                <small>Formulario de producto</small>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/proyectos/django-inventario-detail.jpg" class="d-block w-100" alt="Detalle de producto" loading="lazy">
-              <div class="carousel-caption d-none d-md-block">
-                <small>Detalle de producto</small>
-              </div>
-            </div>
-          </div>
-
-          <button class="carousel-control-prev" type="button" data-bs-target="#gal-django" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#gal-django" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-secondary" href="https://github.com/PeytonDenisse/Catalogo_Moda_APP" target="_blank" rel="noopener">Repositorio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Kotlin/Notas -->
-<div class="modal fade" id="proj-kotlin" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Notas (Kotlin)</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p class="mb-2">App Android con MVVM y Room para crear/editar/buscar notas. Persistencia local y pantallas de listado/detalle.</p>
-        <img src="./img/proyectos/kotlin-notas-detail.jpg" class="img-fluid rounded" alt="Pantallas de la app de notas">
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-secondary" href="#" target="_blank" rel="noopener">Repositorio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Landing -->
-<div class="modal fade" id="proj-frontend" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Landing de Servicios</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p class="mb-2">Landing responsive con componentes reutilizables y buenas prácticas de accesibilidad.</p>
-        <img src="./img/proyectos/landing-frontend-detail.jpg" class="img-fluid rounded" alt="Secciones de la landing">
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-secondary" href="#" target="_blank" rel="noopener">Repositorio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL: Otro -->
-<div class="modal fade" id="proj-otro" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Otro Proyecto</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <p class="mb-2">Descripción del proyecto, objetivo, funcionalidades y capturas.</p>
-        <img src="./img/proyectos/otro-proyecto-detail.jpg" class="img-fluid rounded" alt="Detalle del proyecto">
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-secondary" href="#" target="_blank" rel="noopener">Repositorio</a>
-      </div>
-    </div>
-  </div>
-</div>
