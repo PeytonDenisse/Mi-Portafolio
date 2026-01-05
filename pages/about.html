@@ -1,65 +1,109 @@
-<!-- SOBRE MÍ -->
 <section class="section soft-card p-4 mb-4" id="about">
-  <h2 class="section-title"><i class="bi bi-person me-2"></i>Sobre mí</h2>
-  <p class="mb-3 text-center">
-    Soy una persona proactiva y organizada. Busco hacer mis prácticas profesionales en el área de desarrollo de software.
-    Me gusta el desarrollo <strong>frontend</strong> (HTML, CSS, JS/TS con Bootstrap y nociones de Angular),
-    y <strong>bases de datos</strong> (MySQL, SQL Server, MongoDB) con consultas, vistas y triggers.
-  </p>
+  <div class="d-flex align-items-start justify-content-between flex-wrap gap-2">
+    <div>
+      <h2 class="section-title mb-1">Sobre mí</h2>
+      <p class="text-muted mb-0">Perfil profesional</p>
+    </div>
+    <span class="badge rounded-pill text-bg-light border">
+      <i class="bi bi-geo-alt me-1"></i>León, Guanajuato, México
+    </span>
+  </div>
 
-  <div class="row g-3 mt-2">
-    <div class="col-12 col-md-6">
+  <hr class="my-3">
+
+  <!-- PERFIL (1 columna, ancho completo) -->
+  <div class="mb-4">
+    <p class="text-justify mb-0">
+      Estudiante de la Licenciatura en Ingeniería de Software y Sistemas Computacionales,
+      con formación en desarrollo full stack, diseño de APIs REST, manejo de bases de datos y despliegue
+      de aplicaciones. Experiencia en proyectos académicos y personales donde integro frontend y backend,
+      análisis asistido por Inteligencia Artificial, pruebas de software con Cypress y control de versiones
+      con Git. Interés en buenas prácticas de ingeniería, aprendizaje continuo y trabajo colaborativo en
+      entornos tecnológicos.
+    </p>
+
+  </div>
+
+  <!-- EDUCACIÓN (1 columna, ancho completo) -->
+  <div class="mini-card mb-4">
+    <h3 class="h6 mb-2"><i class="bi bi-mortarboard me-2"></i>Educación</h3>
+    <p class="mb-1"><strong>Universidad La Salle Bajío</strong> – León, México</p>
+    <p class="text-muted small mb-0">Licenciatura en Ingeniería de Software y Sistemas Computacionales</p>
+    <p class="text-muted small mb-0">Febrero 2023 – Actualidad (6.º semestre)</p>
+  </div>
+
+  <!-- TARJETAS EN FILA HORIZONTAL (incluye Inglés) -->
+  <div class="row g-4">
+    <div class="col-12 col-sm-6 col-lg">
+      <div class="mini-card h-100">
+        <div class="d-flex align-items-start">
+          <i class="bi bi-layers fs-4 me-3"></i>
+          <div>
+            <h3 class="h6 mb-1">Desarrollo web</h3>
+            <p class="text-muted small mb-0">Angular, .NET, Node.js, APIs REST.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg">
+      <div class="mini-card h-100">
+        <div class="d-flex align-items-start">
+          <i class="bi bi-check2-circle fs-4 me-3"></i>
+          <div>
+            <h3 class="h6 mb-1">Pruebas</h3>
+            <p class="text-muted small mb-0">Cypress (end-to-end), casos de prueba.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg">
       <div class="mini-card h-100">
         <div class="d-flex align-items-start">
           <i class="bi bi-brush fs-4 me-3"></i>
           <div>
-            <h3 class="h6 mb-1">UI/UX Design</h3>
-            <p class="small m-0">
-              Maquetación responsiva, tipografía y consistencia visual con Bootstrap; prototipos en Figma/Canva/Illustrator.
-            </p>
+            <h3 class="h6 mb-1">Diseño UI/UX</h3>
+            <p class="text-muted small mb-0">Figma/Canva (enfoque práctico).</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-sm-6 col-lg">
       <div class="mini-card h-100">
         <div class="d-flex align-items-start">
-          <i class="bi bi-phone fs-4 me-3"></i>
+          <i class="bi bi-database fs-4 me-3"></i>
           <div>
-            <h3 class="h6 mb-1">Frontend</h3>
-            <p class="small m-0">JS/TS, componentes reutilizables, consumo de APIs REST y accesibilidad.</p>
+            <h3 class="h6 mb-1">Bases de datos</h3>
+            <p class="text-muted small mb-0">MySQL, SQL Server, MongoDB.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Puedes añadir más mini-cards aquí si lo necesitas -->
+    <div class="col-12 col-sm-6 col-lg">
+      <div class="mini-card h-100">
+        <div class="d-flex align-items-start">
+          <i class="bi bi-translate fs-4 me-3"></i>
+          <div>
+            <h3 class="h6 mb-1">Inglés</h3>
+            <p class="text-muted small mb-0">Nivel B2.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- EDUCACIÓN -->
-<section class="section soft-card p-4 mb-4" id="education">
-  <h2 class="section-title"><i class="bi bi-mortarboard me-2"></i>Educación</h2>
-  <p class="mb-1"><strong>Universidad La Salle Bajío</strong> — Ingeniería en Software y Sistemas Computacionales</p>
-  <p class="text-muted small mb-2">Febrero 2023 – Presente (6.º semestre)</p>
-  <ul class="small mb-0">
-    <li>Asignaturas relevantes: Bases de Datos, Redes, Desarrollo Web, Modelado y Procesamiento de Imágenes, Android, Modelos Abstractos.</li>
-  </ul>
-</section>
-
-<!-- CONTACTO -->
-<section class="section soft-card p-4 mb-4" id="contact">
-  <h2 class="section-title"><i class="bi bi-send me-2"></i>Contacto</h2>
-  <ul class="list-unstyled mb-0">
-    <li class="mb-2">
-      <i class="bi bi-envelope me-2"></i>
-      <a href="mailto:denissechagoyaveloz@gmail.com">denissechagoyaveloz@gmail.com</a>
-    </li>
-    <li class="mb-2">
-      <i class="bi bi-telephone me-2"></i>
-      <a href="tel:+524776110666">+52 477 611 0666</a>
-    </li>
-    <li class="mb-2"><i class="bi bi-geo me-2"></i>León, Gto., México</li>
-  </ul>
+  <!-- INTERESES -->
+  <div class="mt-4">
+    <h3 class="h6 mb-2">Intereses técnicos</h3>
+    <div class="d-flex flex-wrap gap-2 pills-solid">
+      <span class="pill"><i class="bi bi-cpu"></i> IA aplicada</span>
+      <span class="pill"><i class="bi bi-diagram-3"></i> APIs REST</span>
+      <span class="pill"><i class="bi bi-box"></i> Contenerización</span>
+      <span class="pill"><i class="bi bi-shield-check"></i> Calidad de software</span>
+      <span class="pill"><i class="bi bi-git"></i> Control de versiones</span>
+    </div>
+  </div>
 </section>

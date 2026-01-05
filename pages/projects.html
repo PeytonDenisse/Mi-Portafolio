@@ -2,96 +2,246 @@
   <h2 class="section-title"><i class="bi bi-grid me-2"></i>Proyectos</h2>
 
   <div class="d-grid gap-4">
+
+    <!-- NatureApp / NatureAPI -->
+    <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
+      <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
+        <img class="project-thumb-list rounded" src="./img/nap.png" alt="NatureApp / NatureAPI">
+      </div>
+      <div class="flex-grow-1">
+        <h3 class="h5 mb-1">NatureApp / NatureAPI</h3>
+        <p class="text-muted mb-2">
+          Plataforma web para exploración y gestión de lugares naturales y senderos, con análisis asistido por IA
+          para generar información útil a partir de los datos registrados.
+        </p>
+        <div class="d-flex flex-wrap gap-1 mb-2">
+          <span class="badge bg-secondary">Angular</span>
+          <span class="badge bg-secondary">.NET</span>
+          <span class="badge bg-secondary">API REST</span>
+          <span class="badge bg-secondary">IA</span>
+          <span class="badge bg-secondary">Docker</span>
+          <span class="badge bg-secondary">Cloud</span>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-sm btn-outline-secondary"
+             href="https://github.com/PeytonDenisse/NatureFRONT_Chagoya"
+             target="_blank" rel="noopener">
+            <i class="bi bi-github me-1"></i> Código
+          </a>
+
+          <button type="button" class="btn btn-sm btn-outline-primary"
+                  data-bs-toggle="modal" data-bs-target="#galleryModal"
+                  data-title="NatureApp / NatureAPI"
+                  data-media="./img/natureapp/natapp.mp4">
+            <i class="bi bi-images me-1"></i> Galería
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- VetCare -->
+    <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
+      <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
+        <img class="project-thumb-list rounded" src="./img/vetcare.png" alt="VetCare">
+      </div>
+      <div class="flex-grow-1">
+        <h3 class="h5 mb-1">VetCare</h3>
+        <p class="text-muted mb-2">
+          Sistema de gestión veterinaria con control de acceso e integración de autenticación con Google
+          mediante Firebase Authentication. Trabajo colaborativo con Git y GitHub.
+        </p>
+        <div class="d-flex flex-wrap gap-1 mb-2">
+          <span class="badge bg-secondary">Angular</span>
+          <span class="badge bg-secondary">Java</span>
+          <span class="badge bg-secondary">API REST</span>
+          <span class="badge bg-secondary">MySQL</span>
+          <span class="badge bg-secondary">Firebase Auth</span>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-sm btn-outline-secondary"
+             href="https://github.com/PeytonDenisse/VetCAre_app"
+             target="_blank" rel="noopener">
+            <i class="bi bi-github me-1"></i> Código
+          </a>
+
+          <button type="button" class="btn btn-sm btn-outline-primary"
+                  data-bs-toggle="modal" data-bs-target="#galleryModal"
+                  data-title="VetCare"
+                  data-media="./img/vetcare/vet.mp4">
+            <i class="bi bi-images me-1"></i> Galería
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Proyecto personal: lugares urbanos (en desarrollo) -->
+    <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
+      <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
+        <img class="project-thumb-list rounded" src="./img/where.png" alt="Plataforma de lugares urbanos y experiencias">
+      </div>
+      <div class="flex-grow-1">
+        <h3 class="h5 mb-1">
+          Plataforma de lugares urbanos y experiencias
+          <span class="badge bg-light text-dark border ms-1">En desarrollo</span>
+        </h3>
+        <p class="text-muted mb-2">
+          Plataforma web inspirada en tendencias de redes sociales para descubrir restaurantes, parques y experiencias.
+          Arquitectura basada en un sistema previo, con proyección a recomendación y clasificación asistida por IA.
+        </p>
+        <div class="d-flex flex-wrap gap-1 mb-2">
+          <span class="badge bg-secondary">Angular</span>
+          <span class="badge bg-secondary">Backend REST</span>
+          <span class="badge bg-secondary">Base de datos</span>
+          <span class="badge bg-secondary">IA (en diseño)</span>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-sm btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">
+            <i class="bi bi-github me-1"></i> Código
+          </a>
+
+          <button type="button" class="btn btn-sm btn-outline-primary"
+                  data-bs-toggle="modal" data-bs-target="#galleryModal"
+                  data-title="Plataforma de lugares urbanos (En desarrollo)"
+                  data-media="./img/urban/1.png|./img/urban/2.png">
+            <i class="bi bi-images me-1"></i> Galería
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Dulcería -->
+    
+
+    <!-- Catálogo Moda (Django) -->
     <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
       <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
         <img class="project-thumb-list rounded" src="./img/djangoYpython.jpg" alt="Catálogo Moda en Django">
       </div>
       <div class="flex-grow-1">
         <h3 class="h5 mb-1">Catálogo Moda (Django)</h3>
-        <p class="text-muted mb-2">Aplicación web para la gestión de productos, categorías y pedidos de un catálogo de moda. Incluye autenticación de usuarios y un panel de administración.</p>
+        <p class="text-muted mb-2">
+          Aplicación web para la gestión de productos, categorías y pedidos. Incluye autenticación de usuarios
+          y panel de administración.
+        </p>
         <div class="d-flex flex-wrap gap-1 mb-2">
           <span class="badge bg-secondary">Python</span>
           <span class="badge bg-secondary">Django</span>
           <span class="badge bg-secondary">Bootstrap</span>
           <span class="badge bg-secondary">MySQL</span>
         </div>
-        <div class="d-flex gap-2">
-          <a class="btn btn-sm btn-outline-secondary" href="https://github.com/PeytonDenisse/Catalogo_Moda_APP" target="_blank" rel="noopener">
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-sm btn-outline-secondary"
+             href="https://github.com/PeytonDenisse/Catalogo_Moda_APP"
+             target="_blank" rel="noopener">
             <i class="bi bi-github me-1"></i> Código
           </a>
-          </div>
+
+          <button type="button" class="btn btn-sm btn-outline-primary"
+                  data-bs-toggle="modal" data-bs-target="#galleryModal"
+                  data-title="Catálogo Moda (Django)"
+                  data-media="./img/catalogo/cmvideo.mp4">
+            <i class="bi bi-images me-1"></i> Galería
+          </button>
+        </div>
       </div>
     </article>
 
+    <!-- Detector de Pastillas -->
     <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
       <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
         <img class="project-thumb-list rounded" src="./img/pythonCV.png" alt="Detector de pastillas con OpenCV">
       </div>
       <div class="flex-grow-1">
-        <h3 class="h5 mb-1">Detector de Pastillas</h3>
-        <p class="text-muted mb-2">Sistema de visión por computadora para identificar las pastillas y la cantidad faltantante de un empaque con la librería OpenCV.</p>
+        <h3 class="h5 mb-1">Detector de Pastillas (OpenCV)</h3>
+        <p class="text-muted mb-2">
+          Sistema de visión por computadora para identificar pastillas y estimar faltantes en un empaque mediante OpenCV.
+          
+        </p>
         <div class="d-flex flex-wrap gap-1 mb-2">
           <span class="badge bg-secondary">Python</span>
           <span class="badge bg-secondary">OpenCV</span>
         </div>
-        <div class="d-flex gap-2">
-          <a class="btn btn-sm btn-outline-secondary" href="https://github.com/PeytonDenisse/Deterctor_Pastillas" target="_blank" rel="noopener">
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-sm btn-outline-secondary"
+             href="https://github.com/PeytonDenisse/Deterctor_Pastillas"
+             target="_blank" rel="noopener">
             <i class="bi bi-github me-1"></i> Código
           </a>
+
+          <button type="button" class="btn btn-sm btn-outline-primary"
+                  data-bs-toggle="modal" data-bs-target="#galleryModal"
+                  data-title="Detector de Pastillas (OpenCV)"
+                  data-media="./img/pastillas/1.png |./img/pastillas/2.png | ./img/pastillas/3.png | ./img/pastillas/4.png | ./img/pastillas/5.png | ./img/pastillas/6.png">
+            <i class="bi bi-images me-1"></i> Galería
+          </button>
         </div>
       </div>
     </article>
 
-   
-
-
+    <!-- Recetario App (Kotlin) -->
     <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
-  <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
-    <img class="project-thumb-list rounded" src="./img/kotlin.png" alt="Captura de pantalla de la app de Recetario">
-  </div>
-  <div class="flex-grow-1">
-    <h3 class="h5 mb-1">Recetario App (Kotlin)</h3>
-    <p class="text-muted mb-2">Aplicación móvil para Android desarrollada con **Jetpack Compose** para la gestión y visualización de recetas a través de una API REST.</p>
-    <div class="d-flex flex-wrap gap-1 mb-2">
-      <span class="badge bg-secondary">Kotlin</span>
-      <span class="badge bg-secondary">Android</span>
-      <span class="badge bg-secondary">Jetpack Compose</span>
-      <span class="badge bg-secondary">Retrofit</span>
-    </div>
-    <div class="d-flex gap-2">
-      <a class="btn btn-sm btn-outline-secondary" href="https://github.com/PeytonDenisse/RecetarioApp" target="_blank" rel="noopener">
-        <i class="bi bi-github me-1"></i> Código
-      </a>
-      <!-- <a class="btn btn-sm btn-outline-primary" href="URL_DEL_VIDEO_DEMO" target="_blank" rel="noopener">
-        <i class="bi bi-play-circle me-1"></i> Video
-      </a> -->
-    </div>
-  </div>
-</article>
-
-
- <!-- <article class="project-list-card d-flex flex-column flex-md-row align-items-center p-3">
       <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4">
-        <img class="project-thumb-list rounded" src="./img/proyectos/landing-frontend.jpg" alt="Landing de Servicios">
+        <img class="project-thumb-list rounded" src="./img/kotlin.png" alt="Recetario App en Kotlin">
       </div>
       <div class="flex-grow-1">
-        <h3 class="h5 mb-1">Landing de Servicios</h3>
-        <p class="text-muted mb-2">Desarrollo de una página de aterrizaje profesional, responsiva y accesible, siguiendo buenas prácticas de diseño frontend.</p>
+        <h3 class="h5 mb-1">Recetario App (Android)</h3>
+        <p class="text-muted mb-2">
+          Aplicación móvil para Android con Jetpack Compose para visualizar recetas consumiendo una API REST.
+        </p>
         <div class="d-flex flex-wrap gap-1 mb-2">
-          <span class="badge bg-secondary">HTML</span>
-          <span class="badge bg-secondary">CSS</span>
-          <span class="badge bg-secondary">JS</span>
+          <span class="badge bg-secondary">Kotlin</span>
+          <span class="badge bg-secondary">Android</span>
+          <span class="badge bg-secondary">Jetpack Compose</span>
+          <span class="badge bg-secondary">Retrofit</span>
         </div>
-        <div class="d-flex gap-2">
-          <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noopener">
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-sm btn-outline-secondary"
+             href="https://github.com/PeytonDenisse/RecetarioApp"
+             target="_blank" rel="noopener">
             <i class="bi bi-github me-1"></i> Código
           </a>
+
+          <button type="button" class="btn btn-sm btn-outline-primary"
+                  data-bs-toggle="modal" data-bs-target="#galleryModal"
+                  data-title="Recetario App (Android)"
+                  data-media="./img/recetario/recetas.mp4">
+            <i class="bi bi-images me-1"></i> Galería
+          </button>
         </div>
       </div>
-    </article> -->
-
-
-
+    </article>
 
   </div>
 </section>
+
+<!-- =========================
+     MODAL GALERÍA (1 sola vez)
+     ========================= -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content soft-card">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="galleryModalTitle">Galería</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <div class="modal-body pt-0">
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="false">
+          <div class="carousel-inner" id="galleryCarouselInner">
+            <!-- JS inyecta slides aquí -->
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
