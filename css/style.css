@@ -247,3 +247,31 @@ body{
   background: rgba(0,0,0,.06);
   border-radius: 18px;
 }
+#galleryModal .carousel-item { padding: 10px; }
+
+/* Modal galería */
+#galleryModal .modal-body {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Carousel ocupa todo el modal */
+#galleryCarousel {
+  width: 100%;
+}
+
+/* Slides centrados */
+#galleryCarousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video visible correctamente */
+#galleryCarousel video {
+  max-height: 60vh;
+  width: 100%;
+  object-fit: contain;
+  background: #000;
+}
