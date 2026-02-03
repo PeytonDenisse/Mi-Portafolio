@@ -275,3 +275,25 @@ body{
   object-fit: contain;
   background: #000;
 }
+
+/* Asegura que solo el elemento activo use flex y sea visible */
+#galleryCarousel .carousel-item.active {
+  display: flex !important; /* Forzamos el flex solo en la activa */
+  justify-content: center;
+  align-items: center;
+}
+
+/* El resto de elementos deben permanecer ocultos */
+#galleryCarousel .carousel-item {
+  display: none; 
+}
+
+/* Ajuste de imágenes para que no se deformen */
+#galleryCarousel .carousel-item img, 
+#galleryCarousel .carousel-item video {
+  max-height: 60vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}

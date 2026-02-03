@@ -99,14 +99,17 @@
       const rawItems = mediaStr.split("|").map(s => s.trim()).filter(Boolean);
 
       const items = rawItems.map(item => {
-        // Si viene con prefijo tipo "mp4:" / "img:" / "yt:" lo respeta
-        if (item.includes(":")) return item;
+        // 1. Limpiamos cualquier espacio rebelde de nuevo
+        const cleanItem = item.trim(); 
+        
+        if (cleanItem.includes(":")) return cleanItem;
 
-        // Si no tiene prefijo, lo infiere por extensión
-        const lower = item.toLowerCase();
-        if (lower.endsWith(".mp4")) return `mp4:${item}`;
-        if (lower.match(/\.(png|jpg|jpeg|webp|gif)$/)) return `img:${item}`;
-        return item; // quedará como no soportado
+        const lower = cleanItem.toLowerCase();
+        // 2. Usamos regex más flexible para las extensiones
+        if (lower.endsWith(".mp4")) return `mp4:${cleanItem}`;
+        if (/\.(png|jpg|jpeg|webp|gif)$/i.test(lower)) return `img:${cleanItem}`;
+        
+        return cleanItem;
       });
 
       items.forEach((item, idx) => {
