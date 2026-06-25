@@ -297,3 +297,192 @@ body{
   object-fit: contain;
   border-radius: 12px;
 }
+
+/* Flechas de control de la galería con alta visibilidad y diseño premium */
+#galleryCarousel .carousel-control-prev,
+#galleryCarousel .carousel-control-next {
+  width: 48px;
+  height: 48px;
+  background: rgba(110, 86, 207, 0.75); /* Color primario con transparencia */
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  opacity: 0.85;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#galleryCarousel .carousel-control-prev {
+  left: 15px;
+}
+
+#galleryCarousel .carousel-control-next {
+  right: 15px;
+}
+
+#galleryCarousel .carousel-control-prev:hover,
+#galleryCarousel .carousel-control-next:hover {
+  background: var(--primary);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(110, 86, 207, 0.4);
+}
+
+#galleryCarousel .carousel-control-prev-icon,
+#galleryCarousel .carousel-control-next-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===============================================================
+   SISTEMA DE ANIMACIONES Y ENTRADAS PREMIUM (Scroll / Entrance)
+   =============================================================== */
+
+/* Animación de entrada inicial para el Sidebar */
+aside {
+  opacity: 0;
+  animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Animación de entrada inicial para el contenedor de contenido */
+.content-region {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Clases para animación de Scroll con IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Retrasos de animación en cascada */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Keyframes de soporte */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================================================
+   TARJETAS DE PROYECTOS EN CUADRÍCULA (GRID STYLE)
+   =============================================================== */
+.project-grid-card {
+  background: var(--card);
+  border: 1px solid rgba(17, 24, 39, 0.05);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-grid-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 38px rgba(110, 86, 207, 0.12); /* Sombra con toque del color primario */
+  border-color: rgba(110, 86, 207, 0.18);
+}
+
+/* Contenedor de la imagen de proyecto (16:9) */
+.project-img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Ratio 16:9 */
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.project-img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-grid-card:hover .project-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Cuerpo de la tarjeta */
+.project-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.project-grid-card:hover .project-card-title {
+  color: var(--primary);
+}
+
+.project-card-subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.project-card-desc {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+/* Botones en el pie de la tarjeta */
+.project-card-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(17, 24, 39, 0.04);
+  padding-top: 1rem;
+}

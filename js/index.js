@@ -43,4 +43,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Inicializa animaciones de aparición al hacer scroll (Scroll Reveal)
+window.initScrollReveal = () => {
+  const revealElements = document.querySelectorAll(".reveal");
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-active");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.05,
+    rootMargin: "0px 0px -50px 0px"
+  });
+
+  revealElements.forEach(el => observer.observe(el));
+};
+
+// Ejecuta al cargar el DOM inicial
+document.addEventListener("DOMContentLoaded", () => {
+  window.initScrollReveal();
+});
+
 

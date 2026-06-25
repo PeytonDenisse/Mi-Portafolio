@@ -46,6 +46,7 @@ async function navigate() {
     contentEl.innerHTML = await res.text();
 
     window.reinitBootstrap?.();   // tooltips/modales si lo usas
+    window.initScrollReveal?.();  // re-inicializa animaciones de scroll
     markActive(hash);
     scrollToSectionIfNeeded(hash);
   } catch (err) {
