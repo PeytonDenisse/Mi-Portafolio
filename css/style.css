@@ -10,20 +10,24 @@
 }
 
 *{ box-sizing:border-box }
-html{ scroll-behavior:smooth }
+html{
+  height:100%;
+  scroll-behavior:smooth;
+}
 body{
   font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   color:var(--text);
-  background:linear-gradient(135deg,var(--bg1),var(--bg2));
-  min-height:100vh;
+  background:var(--bg1);
+  height:100%;
+  margin:0;
+  overflow:hidden;
 }
 
 /* Fondo sutil */
 .page-bg{
   position:fixed; inset:0; pointer-events:none; z-index:-1;
-  background:
-    radial-gradient(40rem 40rem at -10% -10%, rgba(110,86,207,.12), transparent 60%),
-    radial-gradient(40rem 40rem at 110% 110%, rgba(99,102,241,.12), transparent 60%);
+  background:var(--bg2);
+  opacity:.45;
 }
 
 /* Tarjetas */
@@ -36,13 +40,13 @@ body{
 
 /* Avatar */
 .avatar {
-  width: 210px;          /* más grande (puedes subir a 200 o 220 si lo prefieres) */
-  height: 210px;
-  object-fit: cover;     /* recorta sin deformar */
-  border-radius: 50%;    /* círculo perfecto */
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 50%;
   border: 4px solid #fff;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-  margin: 0 auto;        /* centra horizontalmente */
+  margin: 0 auto;
   display: block;
 }
 
@@ -117,6 +121,76 @@ body{
 /* Links hover */
 .hover-primary:hover{ color:var(--primary)!important }
 
+.portfolio-layout{
+  display:flex;
+  height:100vh;
+  width:100%;
+  overflow:hidden;
+}
+
+.portfolio-sidebar{
+  width:340px;
+  height:100vh;
+  flex:0 0 340px;
+  overflow:hidden;
+}
+
+.sidebar-card{
+  height:100vh;
+  overflow:hidden;
+  background:var(--card);
+  border-right:1px solid rgba(17,24,39,.08);
+  box-shadow:0 12px 28px rgba(17,24,39,.07);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  padding:1rem!important;
+}
+
+.portfolio-main{
+  flex:1 1 auto;
+  height:100vh;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding:24px;
+}
+
+.content-region{
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.section-nav{
+  overflow:visible;
+}
+
+.sidebar-card p,
+.contact-list{
+  font-size:.84rem;
+}
+
+.section-nav .btn{
+  border-color:rgba(17,24,39,.06);
+  transition:background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  min-height:34px;
+  padding:.34rem .65rem;
+}
+
+.section-nav .btn.active,
+.section-nav .btn[aria-current="page"]{
+  background:var(--primary);
+  border-color:var(--primary);
+  color:#fff;
+}
+
+.section-nav .btn:focus-visible,
+.hover-primary:focus-visible,
+.project-card-footer .btn:focus-visible{
+  outline:3px solid rgba(110,86,207,.28);
+  outline-offset:2px;
+  box-shadow:none;
+}
+
 /* Quick nav */
 .quick-nav{
   position:fixed; right:18px; top:50%; transform:translateY(-50%);
@@ -134,7 +208,28 @@ body{
 .quick-link.active{ color:#fff; background:var(--primary) }
 
 /* Offset de anclas */
-.section{ scroll-margin-top:100px }
+.section{
+  scroll-margin-top:24px;
+  outline:none;
+}
+
+.tech-category:last-child{
+  margin-bottom:0!important;
+}
+
+.experience-card,
+.certification-card{
+  line-height:1.55;
+}
+
+.experience-list{
+  padding-left:1.1rem;
+  color:#4b5563;
+}
+
+.experience-list li + li{
+  margin-top:.35rem;
+}
 
 /* ===========================
    Responsivo
@@ -147,6 +242,155 @@ body{
   .pill.pill-icon{
     min-width:100px;
     min-height:84px;
+  }
+}
+
+@media (max-width: 991.98px){
+  html,
+  body{
+    height:auto;
+  }
+
+  body{
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+
+  .portfolio-layout{
+    display:block;
+    height:auto;
+    min-height:100vh;
+    overflow:visible;
+    padding:16px;
+  }
+
+  .portfolio-sidebar{
+    width:100%;
+    height:auto;
+    flex:none;
+    overflow:visible;
+    margin-bottom:16px;
+  }
+
+  .sidebar-card{
+    height:auto;
+    border:1px solid rgba(17,24,39,.06);
+    border-radius:24px;
+    box-shadow:var(--shadow);
+    overflow:visible;
+  }
+
+  .portfolio-main{
+    height:auto;
+    overflow:visible;
+    padding:0;
+  }
+
+  .section-nav{
+    display:flex!important;
+    grid-template-columns:none!important;
+    gap:8px!important;
+    overflow-x:auto;
+    overflow-y:hidden;
+    max-height:none;
+    padding-bottom:4px;
+    scroll-snap-type:x proximity;
+  }
+
+  .section-nav .btn{
+    flex:0 0 auto;
+    white-space:nowrap;
+    scroll-snap-align:start;
+  }
+
+  .section{
+    scroll-margin-top:18px;
+  }
+}
+
+@media (max-width: 420px){
+  .soft-card{
+    border-radius:18px;
+  }
+
+  .avatar{
+    width:180px;
+    height:180px;
+  }
+
+  .project-card-body{
+    padding:1.15rem;
+  }
+}
+
+@media (max-height: 760px) and (min-width: 992px){
+  .sidebar-card{
+    padding:1rem!important;
+  }
+
+  .avatar{
+    width:126px;
+    height:126px;
+  }
+
+  .sidebar-card .h4{
+    font-size:1.05rem;
+  }
+
+  .sidebar-card p,
+  .contact-list{
+    font-size:.78rem;
+  }
+
+  .section-nav .btn{
+    min-height:34px;
+    padding:.32rem .55rem;
+    font-size:.82rem;
+  }
+
+  .sidebar-card hr{
+    margin:.65rem 0!important;
+  }
+
+  .sidebar-card .mb-3{
+    margin-bottom:.55rem!important;
+  }
+
+  .sidebar-card .mt-4{
+    margin-top:.75rem!important;
+  }
+}
+
+@media (max-height: 680px) and (min-width: 992px){
+  .sidebar-card{
+    padding:.75rem!important;
+  }
+
+  .avatar{
+    width:106px;
+    height:106px;
+  }
+
+  .sidebar-card .h4{
+    font-size:.98rem;
+  }
+
+  .sidebar-card p,
+  .contact-list{
+    font-size:.74rem;
+  }
+
+  .section-nav .btn{
+    min-height:30px;
+    padding:.25rem .5rem;
+    font-size:.76rem;
+  }
+}
+
+@media (min-width: 1200px){
+  .portfolio-sidebar{
+    width:360px;
+    flex-basis:360px;
   }
 }
 
@@ -372,6 +616,7 @@ aside {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
 
 /* Keyframes de soporte */
 @keyframes fadeInUp {
@@ -485,4 +730,26 @@ aside {
   flex-wrap: wrap;
   border-top: 1px solid rgba(17, 24, 39, 0.04);
   padding-top: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+
+  aside,
+  .content-region,
+  .reveal{
+    opacity:1!important;
+    transform:none!important;
+  }
 }

@@ -3,125 +3,308 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Denisse Chagoya Veloz – CV</title>
+  <title>Denisse Chagoya Veloz - Portafolio</title>
 
-  <!-- Bootstrap + Icons + Fuente -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Devicon (logos tecnologías) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-  <!-- Tus estilos -->
-  <link rel="stylesheet" href="./css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="./css/style.css?v=1.1.0">
 </head>
 <body>
-  <!-- Fondo -->
   <div class="page-bg"></div>
 
-  <main class="container-xxl py-4 position-relative">
-    <div class="row g-4">
-      <!-- Sidebar -->
-      <!-- Sidebar -->
-<aside class="col-12 col-lg-4">
-  <div class="card soft-card p-4 sticky-lg-top" style="top:16px">
-    <div class="text-center">
-      <img src="./img/perfil.jpeg" alt="Foto de perfil de Denisse Chagoya Veloz" class="avatar mb-3">
-      <h1 class="h4 mb-1">Denisse Chagoya Veloz</h1>
-      <p class="text-muted mb-3">
-        Licenciatura en Ingeniería de Software y Sistemas Computacionales · 7.º semestre concluido
-      </p>
-    </div>
+  <div class="portfolio-layout">
+      <aside class="portfolio-sidebar">
+        <div class="p-4 sidebar-card">
+          <div class="text-center">
+            <img src="./img/perfil.jpeg" alt="Foto de perfil de Denisse Chagoya Veloz" class="avatar mb-3">
+            <h1 class="h4 mb-1">Denisse Chagoya Veloz</h1>
+            <p class="text-muted mb-3">
+              Licenciatura en Ingenier&iacute;a de Software y Sistemas Computacionales &middot; 7.&ordm; semestre concluido
+            </p>
+          </div>
 
-    <div class="d-flex flex-column gap-2">
-      <!-- Botón: CV en nueva pestaña -->
-      <a class="btn btn-outline-primary w-100"
-         href="./assets/CV%20Denisse%20Chagoya%20Veloz.pdf"
-         target="_blank" rel="noopener">
-        <i class="bi bi-file-earmark-pdf me-2"></i> Descargar CV
-      </a>
+          <div class="d-flex flex-column gap-2">
+            <a class="btn btn-outline-primary w-100"
+               href="./assets/CV%20Denisse%20Chagoya%20Veloz.pdf"
+               target="_blank" rel="noopener">
+              <i class="bi bi-file-earmark-pdf me-2"></i> Descargar CV
+            </a>
 
-      <!-- Íconos -->
-      <div class="d-flex justify-content-center gap-3 fs-5" aria-label="Enlaces de contacto">
-        <a href="mailto:denissechagoyaveloz@gmail.com"
-           class="text-body-tertiary hover-primary"
-           title="Correo electrónico"
-           aria-label="Correo electrónico">
-          <i class="bi bi-envelope"></i>
-        </a>
-        <a href="tel:+524776110666"
-           class="text-body-tertiary hover-primary"
-           title="Teléfono"
-           aria-label="Teléfono">
-          <i class="bi bi-telephone"></i>
-        </a>
-        <a href="https://github.com/PeytonDenisse"
-           target="_blank" rel="noopener"
-           class="text-body-tertiary hover-primary"
-           title="GitHub"
-           aria-label="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/denisse-chagoya-veloz-824606269/"
-           target="_blank" rel="noopener"
-           class="text-body-tertiary hover-primary"
-           title="LinkedIn"
-           aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
+            <div class="d-flex justify-content-center gap-3 fs-5" aria-label="Enlaces sociales y de contacto">
+              <a href="mailto:denissechagoyaveloz@gmail.com"
+                 class="text-body-tertiary hover-primary"
+                 title="Correo electr&oacute;nico"
+                 aria-label="Enviar correo electr&oacute;nico">
+                <i class="bi bi-envelope"></i>
+              </a>
+              <a href="tel:+524776110666"
+                 class="text-body-tertiary hover-primary"
+                 title="Tel&eacute;fono"
+                 aria-label="Llamar por tel&eacute;fono">
+                <i class="bi bi-telephone"></i>
+              </a>
+              <a href="https://github.com/PeytonDenisse"
+                 target="_blank" rel="noopener"
+                 class="text-body-tertiary hover-primary"
+                 title="GitHub"
+                 aria-label="GitHub de Denisse">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/denisse-chagoya-veloz-824606269/"
+                 target="_blank" rel="noopener"
+                 class="text-body-tertiary hover-primary"
+                 title="LinkedIn"
+                 aria-label="LinkedIn de Denisse">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+
+            <hr class="my-3">
+
+            <ul class="list-unstyled small m-0 contact-list">
+              <li class="mb-2">
+                <i class="bi bi-geo-alt me-2"></i>Le&oacute;n, Guanajuato, M&eacute;xico
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope-at me-2"></i>
+                <a class="text-decoration-none" href="mailto:denissechagoyaveloz@gmail.com">
+                  denissechagoyaveloz@gmail.com
+                </a>
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-phone me-2"></i>
+                <a class="text-decoration-none" href="tel:+524776110666">
+                  +52 477 611 0666
+                </a>
+              </li>
+            </ul>
+
+            <nav class="mt-4 d-grid gap-2 section-nav" aria-label="Navegaci&oacute;n del portafolio">
+              <a class="btn btn-light text-start active" href="#sobre-mi" aria-current="page">
+                <i class="bi bi-person me-2"></i>Sobre m&iacute;
+              </a>
+              <a class="btn btn-light text-start" href="#tecnologias">
+                <i class="bi bi-lightning-charge me-2"></i>Tecnolog&iacute;as
+              </a>
+              <a class="btn btn-light text-start" href="#proyectos">
+                <i class="bi bi-grid me-2"></i>Proyectos
+              </a>
+              <a class="btn btn-light text-start" href="#experiencia">
+                <i class="bi bi-briefcase me-2"></i>Experiencia
+              </a>
+              <a class="btn btn-light text-start" href="#certificaciones">
+                <i class="bi bi-award me-2"></i>Certificaciones
+              </a>
+            </nav>
+          </div>
+        </div>
+      </aside>
+
+      <main id="content" class="portfolio-main">
+        <div class="content-region">
+          <section class="section soft-card p-4 mb-4 reveal" id="sobre-mi" tabindex="-1">
+            <div class="d-flex align-items-start justify-content-between flex-wrap gap-2">
+              <div>
+                <h2 class="section-title mb-1">Sobre m&iacute;</h2>
+                <p class="text-muted mb-0">Perfil profesional</p>
+              </div>
+              <span class="badge rounded-pill text-bg-light border">
+                <i class="bi bi-geo-alt me-1"></i>Le&oacute;n, Guanajuato, M&eacute;xico
+              </span>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="mb-4">
+              <p class="text-justify mb-0">
+                Estudiante de Ingenier&iacute;a en Software con 7.&ordm; semestre concluido y formaci&oacute;n pr&aacute;ctica en desarrollo
+                full stack, dise&ntilde;o de APIs REST, bases de datos SQL y NoSQL, y despliegue de aplicaciones.
+                Inter&eacute;s en comenzar mi trayectoria profesional como desarrolladora junior o practicante, aportando
+                capacidad de aprendizaje, responsabilidad y trabajo colaborativo.
+              </p>
+            </div>
+
+            <div class="mini-card mb-4">
+              <h3 class="h6 mb-2"><i class="bi bi-mortarboard me-2"></i>Educaci&oacute;n</h3>
+              <p class="mb-1"><strong>Universidad La Salle Baj&iacute;o</strong> - Le&oacute;n, M&eacute;xico</p>
+              <p class="text-muted small mb-0">Licenciatura en Ingenier&iacute;a de Software y Sistemas Computacionales</p>
+              <p class="text-muted small mb-0">Febrero 2023 - Actualidad | 7.&ordm; semestre concluido</p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-12 col-sm-6 col-lg reveal reveal-delay-1">
+                <div class="mini-card h-100">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-layers fs-4 me-3"></i>
+                    <div>
+                      <h3 class="h6 mb-1">Desarrollo web</h3>
+                      <p class="text-muted small mb-0">Angular, .NET, Node.js, APIs REST.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg reveal reveal-delay-2">
+                <div class="mini-card h-100">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-check2-circle fs-4 me-3"></i>
+                    <div>
+                      <h3 class="h6 mb-1">Calidad y pruebas</h3>
+                      <p class="text-muted small mb-0">Experiencia acad&eacute;mica con pruebas unitarias, end-to-end y documentaci&oacute;n de casos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg reveal reveal-delay-3">
+                <div class="mini-card h-100">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-brush fs-4 me-3"></i>
+                    <div>
+                      <h3 class="h6 mb-1">Dise&ntilde;o UI/UX</h3>
+                      <p class="text-muted small mb-0">Figma/Canva (enfoque pr&aacute;ctico).</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg reveal reveal-delay-4">
+                <div class="mini-card h-100">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-database fs-4 me-3"></i>
+                    <div>
+                      <h3 class="h6 mb-1">Bases de datos</h3>
+                      <p class="text-muted small mb-0">MySQL, SQL Server, MongoDB.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg reveal reveal-delay-5">
+                <div class="mini-card h-100">
+                  <div class="d-flex align-items-start">
+                    <i class="bi bi-translate fs-4 me-3"></i>
+                    <div>
+                      <h3 class="h6 mb-1">Ingl&eacute;s</h3>
+                      <p class="text-muted small mb-0">Nivel B2.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <h3 class="h6 mb-2">Intereses t&eacute;cnicos</h3>
+              <div class="d-flex flex-wrap gap-2 pills-solid">
+                <span class="pill"><i class="bi bi-cpu"></i> IA aplicada</span>
+                <span class="pill"><i class="bi bi-diagram-3"></i> APIs REST</span>
+                <span class="pill"><i class="bi bi-box"></i> Contenerizaci&oacute;n</span>
+                <span class="pill"><i class="bi bi-shield-check"></i> Calidad de software</span>
+                <span class="pill"><i class="bi bi-git"></i> Control de versiones</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section soft-card p-4 mb-4 reveal" id="tecnologias" tabindex="-1">
+            <h2 class="section-title">
+              <i class="bi bi-lightning-charge me-2"></i>Tecnolog&iacute;as
+            </h2>
+            <div id="technologies-grid" class="technology-groups"></div>
+          </section>
+
+          <section class="section soft-card p-4 mb-4 reveal" id="proyectos" tabindex="-1">
+            <h2 class="section-title"><i class="bi bi-grid me-2"></i>Proyectos</h2>
+
+            <h3 class="h6 mb-3 text-primary"><i class="bi bi-star-fill me-2"></i>Proyectos Destacados (CV)</h3>
+            <div class="row g-4 mb-5" id="featured-projects"></div>
+
+            <hr class="my-4">
+
+            <h3 class="h6 mb-3 text-muted"><i class="bi bi-folder-fill me-2"></i>Otros Proyectos</h3>
+            <div class="row g-4" id="other-projects"></div>
+          </section>
+
+          <section class="section soft-card p-4 mb-4 reveal" id="experiencia" tabindex="-1">
+            <h2 class="section-title"><i class="bi bi-briefcase me-2"></i>Experiencia</h2>
+            <div id="experiences-list" class="row g-3"></div>
+          </section>
+
+          <section class="section soft-card p-4 mb-4 reveal" id="certificaciones" tabindex="-1">
+            <h2 class="section-title"><i class="bi bi-award me-2"></i>Certificaciones y reconocimientos</h2>
+            <h3 class="h6 mb-3 text-primary">Certificaciones y cursos</h3>
+            <div id="certifications-list" class="row g-3 mb-4"></div>
+
+            <h3 class="h6 mb-3 text-primary">Reconocimientos acad&eacute;micos</h3>
+            <div id="recognitions-list" class="row g-3"></div>
+          </section>
+        </div>
+      </main>
+  </div>
+
+  <div class="modal fade" id="cert-web" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Taller de Desarrollo de Aplicaciones Web - La Salle Baj&iacute;o</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="./assets/HTML.jpeg" alt="Certificado Taller de Desarrollo Web" class="img-fluid rounded">
+        </div>
       </div>
-
-      <hr class="my-3">
-
-      <!-- Datos -->
-      <ul class="list-unstyled small m-0">
-        <li class="mb-2">
-          <i class="bi bi-geo-alt me-2"></i>León, Guanajuato, México
-        </li>
-        <li class="mb-2">
-          <i class="bi bi-envelope-at me-2"></i>
-          <a class="text-decoration-none" href="mailto:denissechagoyaveloz@gmail.com">
-            denissechagoyaveloz@gmail.com
-          </a>
-        </li>
-        <li class="mb-2">
-          <i class="bi bi-phone me-2"></i>
-          <a class="text-decoration-none" href="tel:+524776110666">
-            +52 477 611 0666
-          </a>
-        </li>
-      </ul>
-
-      <!-- Navegación (rutas hash) -->
-      <nav class="mt-4 d-grid gap-2" aria-label="Navegación del portafolio">
-        <a class="btn btn-light text-start" href="#/about">
-          <i class="bi bi-person me-2"></i>Sobre mí
-        </a>
-        <a class="btn btn-light text-start" href="#/skills">
-          <i class="bi bi-lightning-charge me-2"></i>Habilidades
-        </a>
-        <a class="btn btn-light text-start" href="#/projects">
-          <i class="bi bi-grid me-2"></i>Proyectos
-        </a>
-      </nav>
     </div>
   </div>
-</aside>
 
-      <!-- Contenido dinámico -->
-      <section class="col-12 col-lg-8">
-        <div id="content" class="content-region"></div>
-      </section>
+  <div class="modal fade" id="cert-sql" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">M&aacute;ster en SQL Server - Udemy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="./img/certificaciones/SQL.png" alt="Certificado SQL Server Udemy" class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
     </div>
-  </main>
+  </div>
 
-  <!-- Bootstrap JS (bundle con Popper) -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content soft-card">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="galleryModalTitle">Galer&iacute;a</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body pt-0">
+          <div id="galleryCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner" id="galleryCarouselInner"></div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- App scripts -->
-  <script src="./js/index.js?v=1.0.1"></script>
-  <script src="./js/bootstrap-init.js?v=1.0.1"></script>
-  <script src="./js/router.js?v=1.0.1"></script>
-  <script src="./js/gallery.js?v=1.0.1"></script>
+  <script src="./js/projects-data.js?v=1.1.0"></script>
+  <script src="./js/technologies-data.js?v=1.1.0"></script>
+  <script src="./js/experiences-data.js?v=1.1.0"></script>
+  <script src="./js/certifications-data.js?v=1.1.0"></script>
+  <script src="./js/index.js?v=1.1.0"></script>
+  <script src="./js/bootstrap-init.js?v=1.1.0"></script>
+  <script src="./js/gallery.js?v=1.1.0"></script>
 </body>
 </html>
