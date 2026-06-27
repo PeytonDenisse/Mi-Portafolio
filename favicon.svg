@@ -1,23 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DCV">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="D">
   <defs>
-    <linearGradient id="bg" x1="18" y1="14" x2="110" y2="114" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f8f5ff"/>
-      <stop offset="1" stop-color="#e9ddff"/>
-    </linearGradient>
-    <linearGradient id="mark" x1="33" y1="28" x2="96" y2="101" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="16" y1="12" x2="116" y2="118" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#7c3aed"/>
-      <stop offset="1" stop-color="#b56cff"/>
+      <stop offset="1" stop-color="#a855f7"/>
     </linearGradient>
   </defs>
-  <rect width="128" height="128" rx="30" fill="url(#bg)"/>
-  <circle cx="100" cy="26" r="15" fill="#d8c1ff" opacity=".72"/>
-  <circle cx="28" cy="101" r="18" fill="#ffffff" opacity=".75"/>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
   <text x="64" y="74"
         text-anchor="middle"
         dominant-baseline="middle"
-        fill="url(#mark)"
+        fill="#ffffff"
         font-family="Poppins, Segoe UI, Arial, sans-serif"
-        font-size="37"
+        font-size="78"
         font-weight="700"
-        letter-spacing="0">DCV</text>
+        letter-spacing="0">D</text>
 </svg>
