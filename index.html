@@ -9,10 +9,71 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1.1.0">
+  <link rel="stylesheet" href="./css/style.css?v=1.1.6">
 </head>
 <body>
   <div class="page-bg"></div>
+
+  <header class="mobile-topbar" aria-label="Navegaci&oacute;n m&oacute;vil">
+    <a class="mobile-brand" href="#sobre-mi" aria-label="Ir al inicio del portafolio">
+      <img src="./img/perfil.jpeg" alt="" class="mobile-brand-avatar">
+      <span>Denisse Chagoya Veloz</span>
+    </a>
+    <button class="mobile-menu-toggle"
+            type="button"
+            aria-label="Abrir men&uacute;"
+            aria-controls="mobile-menu"
+            aria-expanded="false">
+      <i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-label="Men&uacute; m&oacute;vil" hidden>
+    <nav class="mobile-menu-nav" aria-label="Secciones del portafolio">
+      <a class="btn btn-light text-start active" href="#sobre-mi" aria-current="page">
+        <i class="bi bi-person me-2"></i>Sobre m&iacute;
+      </a>
+      <a class="btn btn-light text-start" href="#tecnologias">
+        <i class="bi bi-lightning-charge me-2"></i>Tecnolog&iacute;as
+      </a>
+      <a class="btn btn-light text-start" href="#proyectos">
+        <i class="bi bi-grid me-2"></i>Proyectos
+      </a>
+      <a class="btn btn-light text-start" href="#experiencia">
+        <i class="bi bi-briefcase me-2"></i>Experiencia
+      </a>
+      <a class="btn btn-light text-start" href="#certificaciones">
+        <i class="bi bi-award me-2"></i>Certificaciones
+      </a>
+    </nav>
+
+    <div class="mobile-menu-actions">
+      <a class="btn btn-outline-primary w-100"
+         href="./assets/CV%20Denisse%20Chagoya%20Veloz.pdf"
+         target="_blank" rel="noopener">
+        <i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV
+      </a>
+      <div class="d-flex justify-content-center gap-3 fs-5">
+        <a href="mailto:denissechagoyaveloz@gmail.com"
+           class="text-body-tertiary hover-primary"
+           aria-label="Enviar correo electr&oacute;nico">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a href="https://github.com/PeytonDenisse/PeytonDenisse"
+           target="_blank" rel="noopener"
+           class="text-body-tertiary hover-primary"
+           aria-label="GitHub de Denisse">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/denisse-chagoya-veloz-824606269/"
+           target="_blank" rel="noopener"
+           class="text-body-tertiary hover-primary"
+           aria-label="LinkedIn de Denisse">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <div class="portfolio-layout">
       <aside class="portfolio-sidebar">
@@ -45,7 +106,7 @@
                  aria-label="Llamar por tel&eacute;fono">
                 <i class="bi bi-telephone"></i>
               </a>
-              <a href="https://github.com/PeytonDenisse"
+              <a href="https://github.com/PeytonDenisse/PeytonDenisse"
                  target="_blank" rel="noopener"
                  class="text-body-tertiary hover-primary"
                  title="GitHub"
@@ -239,9 +300,34 @@
             <h3 class="h6 mb-3 text-primary">Reconocimientos acad&eacute;micos</h3>
             <div id="recognitions-list" class="row g-3"></div>
           </section>
+
+          <footer class="portfolio-footer reveal">
+            <p class="mb-1">&copy; <span id="current-year"></span> Denisse Chagoya Veloz</p>
+            <p class="text-muted small mb-1">Ingenier&iacute;a de Software y Sistemas Computacionales</p>
+            <p class="text-muted small mb-3">Le&oacute;n, Guanajuato, M&eacute;xico</p>
+            <div class="footer-links">
+              <a href="https://github.com/PeytonDenisse/PeytonDenisse" target="_blank" rel="noopener" aria-label="GitHub de Denisse">
+                <i class="bi bi-github me-1"></i>GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/denisse-chagoya-veloz-824606269/" target="_blank" rel="noopener" aria-label="LinkedIn de Denisse">
+                <i class="bi bi-linkedin me-1"></i>LinkedIn
+              </a>
+              <a href="mailto:denissechagoyaveloz@gmail.com" aria-label="Enviar correo electr&oacute;nico a Denisse">
+                <i class="bi bi-envelope me-1"></i>Correo
+              </a>
+            </div>
+          </footer>
         </div>
       </main>
   </div>
+
+  <button class="back-to-top"
+          type="button"
+          aria-label="Volver arriba"
+          aria-hidden="true"
+          title="Volver arriba">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <div class="modal fade" id="cert-web" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -303,7 +389,7 @@
   <script src="./js/technologies-data.js?v=1.1.0"></script>
   <script src="./js/experiences-data.js?v=1.1.0"></script>
   <script src="./js/certifications-data.js?v=1.1.0"></script>
-  <script src="./js/index.js?v=1.1.0"></script>
+  <script src="./js/index.js?v=1.1.7"></script>
   <script src="./js/bootstrap-init.js?v=1.1.0"></script>
   <script src="./js/gallery.js?v=1.1.0"></script>
 </body>
