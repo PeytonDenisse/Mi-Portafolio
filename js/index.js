@@ -164,9 +164,10 @@ function renderTechnologies() {
       <h3 class="fw-semibold h6 mb-2">${escapeHtml(group.title)}</h3>
       <div class="d-flex flex-wrap gap-2">
         ${(group.items || []).map((item) => `
-          <span class="pill pill-icon">
+          <span class="pill pill-icon tech-pill" aria-label="${escapeHtml(`${item.name}, experiencia aproximada: ${item.experienceLabel || "por definir"}`)}">
             <i class="${escapeHtml(item.icon)}" aria-hidden="true"></i>
             <span class="label">${escapeHtml(item.name)}</span>
+            ${item.experienceLabel ? `<span class="experience-badge">${escapeHtml(item.experienceLabel)}</span>` : ""}
           </span>
         `).join("")}
       </div>

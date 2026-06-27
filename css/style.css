@@ -93,7 +93,34 @@ body{
 .pill.pill-icon .label{
   font-size:.95rem;
   font-weight:600;
-  line-height:1;
+  line-height:1.15;
+}
+.pill.pill-icon.tech-pill{
+  min-width:118px;
+  min-height:112px;
+  padding:.72rem .7rem;
+}
+.pill.pill-icon.tech-pill .label{
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+.experience-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  max-width:100%;
+  padding:.22rem .5rem;
+  border-radius:999px;
+  background:var(--primary-weak);
+  color:#4f3db0;
+  border:1px solid rgba(110,86,207,.16);
+  font-size:.72rem;
+  font-weight:600;
+  line-height:1.15;
+  white-space:normal;
+}
+.tech-category .d-flex{
+  gap:.75rem!important;
 }
 
 /* Grilla para skills (ordenado y responsivo) */
@@ -323,6 +350,22 @@ body{
   .pill.pill-icon{
     min-width:100px;
     min-height:84px;
+  }
+  .pill.pill-icon.tech-pill{
+    flex:1 1 calc(50% - .75rem);
+    min-width:118px;
+    min-height:112px;
+    padding:.7rem .55rem;
+  }
+  .pill.pill-icon.tech-pill i{
+    font-size:1.45rem;
+  }
+  .pill.pill-icon.tech-pill .label{
+    font-size:.88rem;
+  }
+  .experience-badge{
+    font-size:.68rem;
+    padding:.2rem .42rem;
   }
 }
 
