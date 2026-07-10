@@ -3,6 +3,7 @@ const SECTION_IDS = [
   "tecnologias",
   "proyectos",
   "experiencia",
+  "formacion",
   "certificaciones"
 ];
 
@@ -11,7 +12,7 @@ const LEGACY_HASHES = {
   "#/about": "#sobre-mi",
   "#/skills": "#tecnologias",
   "#/projects": "#proyectos",
-  "#/education": "#sobre-mi",
+  "#/education": "#formacion",
   "#/contact": "#sobre-mi"
 };
 

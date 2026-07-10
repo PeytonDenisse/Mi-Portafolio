@@ -23,22 +23,13 @@ window.PORTFOLIO_PROJECTS = [
     id: "natureapp",
     nombre: "NatureApp",
     slug: "natureapp",
-<<<<<<< HEAD
     descripcionCorta: "Plataforma inteligente de exploración de lugares naturales",
     descripcionCompleta: "Desarrollo de una plataforma web para administrar y visualizar lugares naturales. Integración del frontend en Angular con una API REST desarrollada en .NET e incorporación de análisis asistido por Inteligencia Artificial para generar información sobre los lugares. Uso de Docker y Docker Compose para la configuración de los servicios.",
-=======
-    descripcionCorta: "Plataforma de exploración de lugares naturales",
-    descripcionCompleta: "Desarrollo de una plataforma web para administrar y visualizar lugares naturales. Integración del frontend en Angular con una API REST desarrollada en .NET e incorporación de una funcionalidad de inteligencia artificial dentro de la plataforma. Uso de Docker y Docker Compose para la contenerización y configuración de servicios, además de herramientas de nube y control de versiones.",
->>>>>>> 25317cbdf1b9a07be5a734c3b9c8abc531d449c3
     imagenPrincipal: "./img/nap.png",
     galeria: ["./img/natureapp/natapp.mp4"],
     categoria: "Aplicación web",
     tecnologias: ["Angular", ".NET", "APIs REST", "Inteligencia Artificial", "Docker", "Docker Compose"],
-<<<<<<< HEAD
     caracteristicas: ["Administración de lugares naturales", "API REST", "Análisis asistido por Inteligencia Artificial", "Configuración de servicios con Docker"],
-=======
-    caracteristicas: ["Administración de lugares naturales", "API REST", "Integración de IA", "Contenerización"],
->>>>>>> 25317cbdf1b9a07be5a734c3b9c8abc531d449c3
     contribucionPersonal: null,
     aprendizajes: null,
     estado: "En portafolio",
