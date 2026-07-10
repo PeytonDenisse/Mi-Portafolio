@@ -23,17 +23,27 @@ window.PORTFOLIO_PROJECTS = [
     id: "natureapp",
     nombre: "NatureApp",
     slug: "natureapp",
-    descripcionCorta: "Plataforma de exploración de lugares naturales",
-    descripcionCompleta: "Desarrollo de una plataforma web para administrar y visualizar lugares naturales. Integración de frontend en Angular con una API REST desarrollada en .NET. Uso de Docker y Docker Compose para la contenerización y configuración de servicios, además de herramientas de nube y control de versiones.",
+    descripcionCorta: "Plataforma inteligente de exploración de lugares naturales",
+    descripcionCompleta: "Desarrollo de una plataforma web para administrar y visualizar lugares naturales. Integración del frontend en Angular con una API REST desarrollada en .NET e incorporación de análisis asistido por Inteligencia Artificial para generar información sobre los lugares. Uso de Docker y Docker Compose para la configuración de los servicios.",
     imagenPrincipal: "./img/nap.png",
     galeria: ["./img/natureapp/natapp.mp4"],
     categoria: "Aplicación web",
-    tecnologias: ["Angular", ".NET", "APIs REST", "Docker", "Docker Compose"],
-    caracteristicas: ["Administración de lugares naturales", "API REST", "Contenerización"],
+    tecnologias: ["Angular", ".NET", "APIs REST", "Inteligencia Artificial", "Docker", "Docker Compose"],
+    caracteristicas: ["Administración de lugares naturales", "API REST", "Análisis asistido por Inteligencia Artificial", "Configuración de servicios con Docker"],
     contribucionPersonal: null,
     aprendizajes: null,
     estado: "En portafolio",
     repositorio: "https://github.com/PeytonDenisse/NatureFRONT_Chagoya",
+    repositorios: [
+      {
+        etiqueta: "Front",
+        url: "https://github.com/PeytonDenisse/NatureFRONT_Chagoya"
+      },
+      {
+        etiqueta: "Back",
+        url: "https://github.com/PeytonDenisse/NatureAPI_DChagoya"
+      }
+    ],
     demostracion: null,
     documentacion: null,
     destacado: true,

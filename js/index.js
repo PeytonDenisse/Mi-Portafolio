@@ -84,11 +84,20 @@ function createProjectCard(project, index) {
     .map((tech) => `<span class="badge bg-secondary">${escapeHtml(tech)}</span>`)
     .join("");
 
-  const repoLink = project.repositorio ? `
-    <a class="btn btn-sm btn-outline-secondary" href="${escapeHtml(project.repositorio)}" target="_blank" rel="noopener">
-      <i class="bi bi-github me-1"></i> C&oacute;digo
-    </a>
-  ` : "";
+  const repoLinks = Array.isArray(project.repositorios) && project.repositorios.length
+    ? project.repositorios
+      .filter((repo) => repo && repo.url)
+      .map((repo) => `
+        <a class="btn btn-sm btn-outline-secondary" href="${escapeHtml(repo.url)}" target="_blank" rel="noopener">
+          <i class="bi bi-github me-1"></i> ${escapeHtml(repo.etiqueta || "Código")}
+        </a>
+      `)
+      .join("")
+    : project.repositorio ? `
+      <a class="btn btn-sm btn-outline-secondary" href="${escapeHtml(project.repositorio)}" target="_blank" rel="noopener">
+        <i class="bi bi-github me-1"></i> C&oacute;digo
+      </a>
+    ` : "";
 
   const demoLink = project.demostracion ? `
     <a class="btn btn-sm btn-outline-primary" href="${escapeHtml(project.demostracion)}" target="_blank" rel="noopener">
@@ -128,7 +137,7 @@ function createProjectCard(project, index) {
           <p class="project-card-desc">${escapeHtml(project.descripcionCompleta)}</p>
           <div class="d-flex flex-wrap gap-1 mb-2">${techBadges}</div>
           <div class="project-card-footer">
-            ${repoLink}
+            ${repoLinks}
             ${demoLink}
             ${docsLink}
             ${galleryButton}
