@@ -1,8 +1,8 @@
 const SECTION_IDS = [
   "sobre-mi",
+  "experiencia",
   "tecnologias",
   "proyectos",
-  "experiencia",
   "formacion",
   "certificaciones"
 ];
