@@ -32,7 +32,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1.1.7">
+  <link rel="stylesheet" href="./css/style.css?v=1.1.8">
 </head>
 <body>
   <div class="page-bg"></div>
@@ -79,6 +79,12 @@
          target="_blank" rel="noopener">
         <i class="bi bi-file-earmark-pdf me-2"></i>Descargar CV
       </a>
+      <button class="btn btn-primary w-100"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#qrModal">
+        <i class="bi bi-qr-code me-2"></i>Mostrar c&oacute;digos QR
+      </button>
       <div class="d-flex justify-content-center gap-3 fs-5">
         <a href="mailto:denissechagoyaveloz@gmail.com"
            class="text-body-tertiary hover-primary"
@@ -113,11 +119,19 @@
           </div>
 
           <div class="d-flex flex-column gap-2">
-            <a class="btn btn-outline-primary w-100"
-               href="./assets/CV%20Denisse%20Chagoya%20Veloz.pdf?v=20260924"
-               target="_blank" rel="noopener">
-              <i class="bi bi-file-earmark-pdf me-2"></i> Descargar CV
-            </a>
+            <div class="sidebar-primary-actions">
+              <a class="btn btn-outline-primary"
+                 href="./assets/CV%20Denisse%20Chagoya%20Veloz.pdf?v=20260924"
+                 target="_blank" rel="noopener">
+                <i class="bi bi-file-earmark-pdf me-1"></i> Descargar CV
+              </a>
+              <button class="btn btn-primary"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#qrModal">
+                <i class="bi bi-qr-code me-1"></i> C&oacute;digos QR
+              </button>
+            </div>
 
             <div class="d-flex justify-content-center gap-3 fs-5" aria-label="Enlaces sociales y de contacto">
               <a href="mailto:denissechagoyaveloz@gmail.com"
@@ -381,6 +395,60 @@
     <i class="bi bi-arrow-up" aria-hidden="true"></i>
   </button>
 
+  <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content soft-card qr-modal-content">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <h5 class="modal-title" id="qrModalTitle">Comparte mi portafolio</h5>
+            <p class="text-muted small mb-0">Escanea un c&oacute;digo para abrir la p&aacute;gina o el CV actualizado.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-3">
+          <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-6">
+              <article class="qr-card h-100 text-center">
+                <span class="qr-card-icon" aria-hidden="true"><i class="bi bi-window"></i></span>
+                <h6 class="mb-2">Portafolio web</h6>
+                <p class="text-muted small">Abre la p&aacute;gina principal con mi experiencia y proyectos.</p>
+                <a href="https://peytondenisse.github.io/Mi-Portafolio/" target="_blank" rel="noopener" aria-label="Abrir el portafolio web">
+                  <img class="qr-image" src="./assets/qr/portafolio-qr.png?v=1" alt="C&oacute;digo QR para abrir el portafolio de Denisse Chagoya Veloz">
+                </a>
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                  <a class="btn btn-sm btn-primary" href="https://peytondenisse.github.io/Mi-Portafolio/" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Abrir
+                  </a>
+                  <a class="btn btn-sm btn-outline-primary" href="./assets/qr/portafolio-qr.png?v=1" download="QR-Portafolio-Denisse-Chagoya.png">
+                    <i class="bi bi-download me-1"></i>Guardar QR
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6">
+              <article class="qr-card h-100 text-center">
+                <span class="qr-card-icon" aria-hidden="true"><i class="bi bi-file-earmark-person"></i></span>
+                <h6 class="mb-2">CV en PDF</h6>
+                <p class="text-muted small">Abre directamente la versi&oacute;n actualizada de mi curr&iacute;culum.</p>
+                <a href="./assets/CV%20Denisse%20Chagoya%20Veloz.pdf?v=20260924" target="_blank" rel="noopener" aria-label="Abrir el CV de Denisse Chagoya Veloz en PDF">
+                  <img class="qr-image" src="./assets/qr/cv-qr.png?v=1" alt="C&oacute;digo QR para abrir el CV de Denisse Chagoya Veloz en PDF">
+                </a>
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                  <a class="btn btn-sm btn-primary" href="./assets/CV%20Denisse%20Chagoya%20Veloz.pdf?v=20260924" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right me-1"></i>Abrir CV
+                  </a>
+                  <a class="btn btn-sm btn-outline-primary" href="./assets/qr/cv-qr.png?v=1" download="QR-CV-Denisse-Chagoya.png">
+                    <i class="bi bi-download me-1"></i>Guardar QR
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="cert-web" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
@@ -441,7 +509,7 @@
   <script src="./js/technologies-data.js?v=1.1.1"></script>
   <script src="./js/experiences-data.js?v=1.1.1"></script>
   <script src="./js/certifications-data.js?v=1.1.0"></script>
-  <script src="./js/index.js?v=1.1.8"></script>
+  <script src="./js/index.js?v=1.1.9"></script>
   <script src="./js/bootstrap-init.js?v=1.1.0"></script>
   <script src="./js/gallery.js?v=1.1.0"></script>
 </body>

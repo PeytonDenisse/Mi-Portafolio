@@ -142,6 +142,46 @@ body{
 }
 .project-card.disabled{ opacity:.7; pointer-events:none }
 
+/* C&oacute;digos QR para compartir el portafolio y el CV */
+.qr-modal-content{
+  overflow:hidden;
+}
+.qr-card{
+  position:relative;
+  padding:1.25rem;
+  border:1px solid rgba(110,86,207,.14);
+  border-radius:20px;
+  background:linear-gradient(180deg, #fff 0%, #faf8ff 100%);
+}
+.qr-card-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  margin-bottom:.75rem;
+  border-radius:50%;
+  background:var(--primary-weak);
+  color:var(--primary);
+  font-size:1.2rem;
+}
+.qr-image{
+  display:block;
+  width:min(100%, 260px);
+  height:auto;
+  margin:0 auto;
+  padding:10px;
+  border:1px solid rgba(17,24,39,.08);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 8px 20px rgba(17,24,39,.08);
+}
+.qr-image:focus-visible,
+.qr-card a:focus-visible{
+  outline:3px solid rgba(110,86,207,.28);
+  outline-offset:3px;
+}
+
 /* Títulos */
 .section-title{ font-weight:600; margin-bottom:1rem }
 
@@ -199,6 +239,21 @@ body{
 .sidebar-card p,
 .contact-list{
   font-size:.84rem;
+}
+
+.sidebar-primary-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.5rem;
+}
+.sidebar-primary-actions .btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  padding:.45rem .35rem;
+  font-size:.78rem;
+  white-space:nowrap;
 }
 
 .section-nav .btn{

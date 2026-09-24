@@ -376,6 +376,10 @@ function initMobileMenu() {
   const toggle = document.querySelector(".mobile-menu-toggle");
   if (!menu || !toggle) return;
 
+  menu.querySelector('[data-bs-target="#qrModal"]')?.addEventListener("click", () => {
+    closeMobileMenu({ restoreFocus: false });
+  });
+
   toggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
