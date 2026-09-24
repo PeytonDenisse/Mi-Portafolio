@@ -1,5 +1,24 @@
 window.PORTFOLIO_EXPERIENCES = [
   {
+    id: "grupo-olson-it-jr",
+    title: "Grupo Olson - Desarrolladora Jr. de IT",
+    organization: "Grupo Olson",
+    type: "Experiencia profesional · Agosto 2026 - Actualidad",
+    description: "Participación en el desarrollo de un dashboard interno para la empresa, colaborando con el área de IT en la implementación y mejora de funcionalidades.",
+    contributions: [
+      "Desarrollo y mejora de funcionalidades para el dashboard interno.",
+      "Colaboración con el equipo de IT durante la implementación de soluciones.",
+      "Apoyo a la visualización y consulta de información dentro de la plataforma."
+    ],
+    skills: [
+      "Desarrollo de dashboards",
+      "Desarrollo web",
+      "Visualización de información",
+      "Trabajo en equipo",
+      "Mejora continua"
+    ]
+  },
+  {
     id: "techwomen-imju-leon",
     title: "TechWomen IMJU León",
     organization: "TechWomen IMJU León",
