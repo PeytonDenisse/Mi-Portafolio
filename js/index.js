@@ -217,10 +217,18 @@ function renderExperiences() {
 
 function createCertificationCard(item, index) {
   const meta = [item.issuer, item.date].filter(Boolean).join(" - ");
-  const action = item.modalTarget ? `
+  const modalAction = item.modalTarget ? `
     <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="${escapeHtml(item.modalTarget)}">
       Ver certificado
     </button>
+  ` : "";
+  const credentialAction = item.credentialUrl ? `
+    <a class="btn btn-sm btn-primary" href="${escapeHtml(item.credentialUrl)}" target="_blank" rel="noopener">
+      Verificar credencial
+    </a>
+  ` : "";
+  const actions = modalAction || credentialAction ? `
+    <div class="d-flex flex-wrap gap-2">${modalAction}${credentialAction}</div>
   ` : "";
 
   return `
@@ -229,7 +237,7 @@ function createCertificationCard(item, index) {
         <h3 class="h6 mb-1">${escapeHtml(item.title)}</h3>
         ${meta ? `<p class="text-muted small mb-1">${escapeHtml(meta)}</p>` : ""}
         <p class="text-muted small mb-2">${escapeHtml(item.description)}</p>
-        ${action}
+        ${actions}
       </article>
     </div>
   `;
